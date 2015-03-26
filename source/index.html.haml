@@ -1,9 +1,73 @@
 ---
-title: Middleman is Watching
+title: Welcome to Azure Construction
 body_class: index
 ---
 
-.welcome
-  %h1 Middleman is Watching
-  %p.doc
-    = link_to 'Read Online Documentation', 'http://middlemanapp.com/', title: 'Read Online Documentation', target: '_blank'
+.container
+  %section.body-header
+    .twelve.columns
+      %h4.em Bay Area landscaping, construction, and lawn care services
+
+.container#about-us
+  .one-third.column
+    %h5 Local
+    %p
+      Azure Landscaping and Construction is locally owned and operated with the skills and integrity to do the job right. We are based in Oakland and serve the East Bay, San Francisco, and Marin County.
+  .one-third.column
+    %h5 Family owned
+    %p
+      Founded and Family owned since 2008 and have over 15 years of qualified experience in creating a peaceful, beautiful masterpiece of living art. From start to finish, we cultivate your vision into a reality.
+
+  .one-third.column
+    %h5 Trustworthy
+    %p
+      Azure Landscaping and Construction prides itself on being Reliable, Honest, and Hardworking. We guarantee the quality of our workmanship and materials. Our attention to detail separates us from the competition.
+
+.container#projects
+  .twelve.columns
+    %h5 Some of our projects
+    #slideshow
+      %ul
+        %li
+          = tag :img, :src => '/images/project1.jpg'
+        %li
+          = tag :img, :src => '/images/project2.jpg'
+        %li
+          = tag :img, :src => '/images/project3.jpg'
+        %li
+          = tag :img, :src => '/images/project4.jpg'
+        %li
+          = tag :img, :src => '/images/project5.jpg'
+        %li
+          = tag :img, :src => '/images/project6.jpg'
+
+
+.container#contact
+  .one.columns
+    %span.hidden Foo
+  .eleven.columns
+    %h5 Contact us
+    #contact-form-wrapper
+      %form#contact-form
+        .row
+          .six.columns
+            %label{:for => "emailInput"} Your email
+            %input#emailInput.u-full-width{:placeholder => "test@mailbox.com", :type => "email"}/
+          .six.columns
+            %label{:for => "recipientInput"} Reason for contacting
+            %select#recipientInput.u-full-width
+              %option{:value => "Option 1"} General Questions
+              %option{:value => "Option 2"} Landscaping Quote
+              %option{:value => "Option 3"} Construction Quote
+        %label{:for => "exampleMessage"} Message
+        %textarea#contactMessage.u-full-width{:placeholder => "Hi Alan …"}
+        %label.send-yourself-copy
+          %input{:type => "checkbox"}/
+          %span.label-body Send a copy to yourself
+        %input.button-primary#form-submit{:type => "submit", :value => "Submit"}/
+
+.container#footer
+  .twelve.columns
+    %footer
+      %ul
+        %li &copy; 2015 Azure Construction
